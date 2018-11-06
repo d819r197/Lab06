@@ -3,18 +3,18 @@
 
 
 #Add needed Test.o
-prog: main.o TestSuite.o
-	g++ -g -Wall -std=c++11 main.o LinkedListOfInts.o TestSuite.o -o prog
+lab06: main.o TestSuite.o
+	g++ -g -Wall -std=c++11 main.o LinkedListOfInts.o TestSuite.o -o lab06
 
 
-main.o: main.cpp TestSuite.h
+main.o: main.cpp
 	g++ -g -Wall -std=c++11 -c main.cpp
 
 
 #Add needed Test.o recipe and compiler command
-TestSuite.o: TestSuite.h TestSuite.cpp
+TestSuite.o: TestSuite.h LinkedListOfInts.h
 	g++ -g -Wall -std=c++11 -c TestSuite.cpp
 
 #DON'T delete LinkedList.o!
 clean:
-	rm main.o *.*~ prog
+	rm TestSuite.o main.o *.*~ lab06

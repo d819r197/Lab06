@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <vector>
-#include "List.h"
-#include "Node.h"
 
 class TestSuite {
   public:
@@ -12,24 +10,16 @@ class TestSuite {
     bool exportBugList();
 
     //List Tests
-    bool testDeconstructor();
     bool testIsEmpty();
-    bool testSize();
-    bool testSearch();
-    bool testAddBack();
-    bool testAddFront();
-    bool testRemoveBack();
-    bool testRemoveFront();
-
-    //Node Tests
-    bool testConstructor();
-    bool testGetValue();
-    bool testSetValue();
-    bool testGetNext();
-    bool testSetNext();
-
+    bool testSizeWithFront(int, int);
+    bool testSizeWithBack(int, int);
+    bool testSearchWithFront(int, int);
+    bool testSearchWithBack(int, int);
+    bool testAddBack(int, int);
+    bool testAddFront(int, int);
+    bool testRemoveBack(int, int);
+    bool testRemoveFront(int, int);
 
 };
-
 
 #endif
