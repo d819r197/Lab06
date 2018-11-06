@@ -3,12 +3,13 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 class TestSuite {
   public:
     int runAllTest();
     bool exportBugList();
-    void gatherBugs(int, int);
+    void gatherBugs(int, int, std::string);
 
     //List Tests
     bool testIsEmpty();
@@ -22,7 +23,7 @@ class TestSuite {
     bool testRemoveFront(int, int);
 
   private:
-    string daList = "";
+    std::string daList = "";
 };
 
 #endif

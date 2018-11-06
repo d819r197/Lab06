@@ -299,8 +299,8 @@ bool TestSuite::exportBugList() {
   }
 }
 
-void TestSuite::gatherBugs(int x, int testsRan, string test){
-  string bug = "Test " + testsRan + ": failed with input: " + x + " on test: " + test + ".\n";
+void TestSuite::gatherBugs(int x, int testsRan, std::string test){
+  std::string bug = "Test " + testsRan + ": failed with input: " + x + " on test: " + test + ".\n";
   daList += bug;
 }
 
