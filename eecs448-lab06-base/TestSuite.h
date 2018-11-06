@@ -8,6 +8,7 @@ class TestSuite {
   public:
     int runAllTest();
     bool exportBugList();
+    void gatherBugs(int, int);
 
     //List Tests
     bool testIsEmpty();
@@ -20,6 +21,8 @@ class TestSuite {
     bool testRemoveBack(int, int);
     bool testRemoveFront(int, int);
 
+  private:
+    string daList = "";
 };
 
 #endif
